@@ -1,0 +1,19 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+}
+ext {
+    nameGroup = "dev.entao.app"
+    nameVersion = "0.7.0"
+    nameAF = "jsonhttp"
+    nameGithub = "AppJsonHttp"
+    libDesc = 'Android Library, write log message to Logcat OR local files.'
+}
+//检查AndroidManifest.xml中的package
+dependencies {
+    implementation 'androidx.core:core-ktx:1.7.0'
+    api 'dev.entao.app:json:0.7.0'
+    api 'dev.entao.app:http:0.7.0'
+    api 'dev.entao.app:basic:0.7.0'
+}
+apply from: "libcommon.gradle"
